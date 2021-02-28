@@ -1,0 +1,859 @@
+/* CSS Global */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.corps {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+
+/* CSS Header */
+
+header {
+    width: 100%;
+}
+
+
+/* CSS Navbar */
+
+.reservia-header {
+    padding-right: 80px;
+    padding-left: 55px;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    height: 85px;
+}
+
+.reservia-logo {
+    width: 7rem;
+    grid-column: span 5 / span 1;
+}
+
+.reservia-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    order: 2;
+    list-style-type: none;
+    grid-column: span 3 / span 2;
+}
+
+.reservia-menu-link {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.reservia-menu-link:hover {
+    color: #1e90ff;
+}
+
+.reservia-menu-link:hover:before {
+    content: ' ';
+    height: 2px;
+    width: 100%;
+    background-color: #1e90ff;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    left: 0;
+}
+
+.reservia-menu .reservia-hebergements {
+    font-weight: 500;
+    padding: 2rem;
+}
+
+.reservia-menu .reservia-activities {
+    font-weight: 500;
+    padding: 2rem;
+}
+
+.reservia-sign-up {
+    display: none;
+}
+
+.reservia-menu-name {
+    color: #1e90ff;
+    padding: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* CSS Bar de recherche */
+
+.search-filter {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 60px
+}
+
+.search-filter h6 {
+    font-size: small;
+    line-height: 3;
+    opacity: 60%;
+}
+
+form {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.search-filter_bar {
+    width: 205px;
+}
+
+.search-filter_bar::-webkit-input-placeholder {
+    font-weight: 900;
+    color: black;
+}
+
+form>input,
+form i:first-child {
+    border: #F2F2F2 solid 1px;
+    padding: 13px;
+    outline: none;
+}
+
+form>i:first-child {
+    background-color: #F2F2F2;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+}
+
+form i:last-child {
+    display: none;
+}
+
+form input:nth-child(3) {
+    background-color: #0065fc;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 700;
+    border: none;
+}
+
+
+/* CSS Filtre */
+
+.box-filter {
+    margin: 30px 60px;
+}
+
+.box-filter h3 {
+    margin: auto 0;
+    display: inline;
+}
+
+.box-filter_button {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 10px 0 0 10px;
+}
+
+.box-filter_btn {
+    border: 2px solid #ddd;
+    border-radius: 40px;
+    margin-left: 20px;
+    outline: none;
+    background-color: white;
+    transition: background-color, transform 0.5s ease-in-out;
+    height: 45px;
+    position: relative;
+}
+
+.box-filter_btn:hover {
+    background-color: #1e90ff;
+    transform: scale(1.15);
+}
+
+.box-filter i {
+    padding: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #deebff;
+    color: #0065fc;
+    position: absolute;
+    left: -10px;
+    top: -1px;
+}
+
+.box-filter span {
+    padding: 0px 15px 0 51px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.info i {
+    background-color: white;
+    color: #0065fc;
+    border: #deebff solid 2px;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+
+/* CSS Information */
+
+.info {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-bottom: 35px;
+}
+
+.info span:nth-child(2) {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+/* CSS Hebergement */
+
+.bedroom-box {
+    width: auto;
+    height: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bedroom-box_results {
+    width: 63%;
+    height: fit-content;
+    background-color: #F2F2F2;
+    border-radius: 20px
+}
+
+
+/* CSS Populaire*/
+
+.bedroom-box_popular {
+    width: 32.7%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 20px
+}
+
+.bedroom-box_title {
+    margin: 40px 0 20px 30px;
+    font-weight: 700;
+}
+
+.bedroom-box_heberg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.heberg {
+    width: 29.9%;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.heberg:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heberg-b {
+    margin-top: 25px;
+}
+
+.heberg img {
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 3px;
+    object-fit: cover;
+}
+
+.heberg-img {
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: white solid 3px;
+    padding: 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.heberg-des {
+    padding: 0px 0px 0px 15px;
+    line-height: 1.5;
+}
+
+.heberg-a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+}
+
+.checked {
+    color: #0065fc;
+}
+
+.empty {
+    color: #ccc;
+}
+
+.next {
+    margin: 40px 0 40px 30px;
+}
+
+.bedroom-title {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 20px 30px;
+    font-weight: 700;
+}
+
+.bedroom-title i {
+    font-size: x-large;
+}
+
+.bedroom-title_room {
+    height: 140px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0px 30px 0px 30px;
+    display: flex;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
+    border: white solid 3px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.bedroom-title_room:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.room-description {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    padding: 0px 0px 0px 15px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.room_two {
+    margin-top: 33px;
+}
+
+.room_three {
+    margin-top: 33px;
+    margin-bottom: 37px;
+}
+
+
+/* CSS Activité */
+
+.activities {
+    width: auto;
+    height: 600px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.section-title {
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.box-activitie {
+    width: 100%;
+    height: 450px;
+    display: flex;
+}
+
+.card {
+    background-color: white;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cardimg {
+    width: 40%;
+    height: 100%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.card-description {
+    display: flex;
+    padding-left: 25px;
+    padding-top: 12px;
+    align-items: center;
+}
+
+.small-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0px 0px 0 rgb(0 0 0 / 20%), 0 3px 12px 0 rgb(0 0 0 / 19%);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.cards:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cards a img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.cardmargin {
+    margin-right: 3rem;
+}
+
+.cardsone {
+    margin-bottom: 1.5rem;
+}
+
+.cardstwo {
+    margin-top: 1.5rem;
+}
+
+.cardshadow {
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 12px 0 rgba(0, 0, 0, 0.19);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.cardshadow:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cards-a {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: 60%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0px 0px 0 rgb(0 0 0 / 20%), 0 3px 12px 0 rgb(0 0 0 / 19%);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.cards-b {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    box-shadow: 0 0px 0px 0 rgb(0 0 0 / 20%), 0 3px 12px 0 rgb(0 0 0 / 19%);
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.cards-a:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cards-b:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imgport-fort {
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.img-frioul {
+    height: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.imgport {
+    height: 89.2%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.imgportone {
+    height: 76%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.text-activitie {
+    margin: 1.2rem 1.5rem;
+}
+
+
+/* CSS Hebergement */
+
+footer {
+    background-color: #F2F2F2;
+    width: 100%;
+}
+
+.box-footer {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.footer-content {
+    padding: 2rem 2rem;
+}
+
+.footer-link {
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+/* CSS responsive */
+
+@media all and (min-width:769px) and (max-width: 1279px) {
+    .box-filter {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        padding: 30px 60px;
+    }
+    .bedroom-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0;
+    }
+    .bedroom-box_results {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .bedroom-box_popular {
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        border-radius: 20px;
+        padding-bottom: 20px;
+    }
+    .box-room {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .room-description {
+        font-size: smaller;
+    }
+    .room_two {
+        margin-top: 0px;
+    }
+    .room_three {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .bedroom-title_room {
+        width: 30%;
+        height: 107px;
+    }
+    .bedroom-box_results:nth-child(1) {
+        order: 2;
+    }
+    .bedroom-box_popular:nth-child(2) {
+        order: 1;
+    }
+    .text-activitie {
+        padding: 0.5rem 0.5rem;
+        text-align: center;
+        font-size: smaller;
+        margin: 0;
+    }
+    .cardmargin {
+        margin-right: 1rem;
+    }
+    .cards-a {
+        margin-bottom: 0.5rem;
+    }
+    .cards-b {
+        margin-top: 0.5rem;
+    }
+    .cardsone {
+        margin-bottom: 0.5rem;
+    }
+    .cardstwo {
+        margin-top: 0.5rem;
+    }
+}
+
+@media all and (min-width:769px) and (max-width: 893px) {
+    .reservia-header {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+    .reservia-logo {
+        grid-column: span 4 / span 1;
+    }
+    .reservia-menu {
+        grid-column: span 4 / span 2;
+    }
+    .reservia-sign-up {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .imgport,
+    .imgport-fort,
+    .imgportone,
+    .img-frioul {
+        height: 250px !important;
+    }
+    .cards-b,
+    .cardstwo {
+        margin: 0 !important;
+    }
+    .cards-a,
+    .card,
+    .cardstwo,
+    .cardsone {
+        margin-bottom: 1rem;
+    }
+    .reservia-sign-up {
+        display: flex;
+        justify-content: flex-end;
+        grid-column: span 2 / span 3;
+        color: #1e90ff;
+        padding: 2rem;
+        font-weight: bold;
+    }
+    .reservia-menu-link {
+        width: auto;
+    }
+    .reservia-menu-link:hover:before {
+        bottom: 0;
+        top: initial;
+        cursor: pointer;
+        left: 0;
+    }
+    .reservia-menu {
+        grid-column: span 4 / span 3;
+    }
+    .reservia-menu .reservia-menu-link {
+        width: calc(100% / 2) !important;
+    }
+    .reservia-menu-name {
+        display: none;
+    }
+    .reservia-header {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 0;
+    }
+    .reservia-logo {
+        grid-column: span 2 / span 3;
+        margin-left: 55px;
+    }
+    .name {
+        margin-right: 50px;
+        text-decoration: none;
+        color: #1e90ff;
+    }
+    .title-filter {
+        font-size: 1.5rem;
+    }
+    .search-filter {
+        align-items: center;
+        text-align: center;
+        margin: 70px 60px;
+    }
+    .reservia-menu .reservia-hebergements {
+        padding: 1rem;
+    }
+    .reservia-menu .reservia-activities {
+        padding: 1rem;
+    }
+    form input:nth-child(3) {
+        display: none;
+    }
+    form i:last-child {
+        display: inline;
+        padding: 13px;
+        background-color: #0065fc;
+        margin-left: -10px;
+        color: white;
+        border-radius: 10px;
+    }
+    .box-filter_btn {
+        margin-bottom: 10px;
+    }
+    .info {
+        width: 70%;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-accom-one {
+        left: 0px;
+        width: 50%;
+        margin: 0px;
+        text-align: center;
+        bottom: 0px;
+        position: absolute;
+    }
+    .btn-accom-two {
+        right: 50%;
+    }
+    .bedroom-box {
+        width: 100%;
+        height: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .bedroom-box_results {
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .bedroom-box_popular {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        background-color: #F2F2F2;
+        border-radius: 0px;
+    }
+    .heberg {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 0px 0px 0 rgb(0 0 0 / 20%), 0 3px 12px 0 rgb(0 0 0 / 19%);
+        transition: box-shadow 0.5s ease-in-out;
+    }
+    .bedroom-box_results:nth-child(1) {
+        order: 2;
+    }
+    .bedroom-box_popular:nth-child(2) {
+        order: 1;
+    }
+    .activities {
+        width: 100%;
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .box-activitie {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .imgport {
+        height: 89.2%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .box-footer {
+        width: auto;
+        flex-direction: column;
+    }
+}
