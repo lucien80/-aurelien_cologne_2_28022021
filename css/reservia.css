@@ -553,7 +553,7 @@ form input:nth-child(3) {
 }
 
 
-/* CSS Hebergement */
+/* CSS Footer */
 
 footer {
     background-color: #F2F2F2;
@@ -562,8 +562,16 @@ footer {
 
 .box-footer {
     display: flex;
-    width: 70%;
+    max-width: 100%;
+    width: 1400px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.box-footer-content {
+    display: flex;
     justify-content: space-between;
+    width: 80%
 }
 
 .footer-content {
@@ -736,17 +744,27 @@ footer {
     }
     .title-filter {
         font-size: 1.5rem;
+        width: 80%;
+        margin-left: 25px;
     }
     .search-filter {
-        align-items: center;
-        text-align: center;
-        margin: 70px 0px;
+        margin: 40px 0px;
+    }
+    .search-filter h6 {
+        font-size: 1rem;
+        margin-left: 25px;
+    }
+    .search-filter_bar {
+        width: 65%;
     }
     .reservia-menu .reservia-hebergements {
         padding: 1rem;
     }
     .reservia-menu .reservia-activities {
         padding: 1rem;
+    }
+    form {
+        margin-left: 30px;
     }
     form input:nth-child(3) {
         display: none;
@@ -759,15 +777,24 @@ footer {
         color: white;
         border-radius: 10px;
     }
+    .box-filter h3 {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
     .box-filter_btn {
         margin-bottom: 10px;
     }
     .info {
-        width: 70%;
+        width: 80%;
+        margin-left: 30px;
+    }
+    .box-filter_button {
+        margin: 10px 0 0 10px;
     }
     header {
         display: flex;
         flex-direction: column;
+        padding: 0;
     }
     .btn-accom-one {
         left: 0px;
@@ -854,8 +881,10 @@ footer {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
+    .box-footer-content {
+        flex-direction: column;
+    }
     .box-footer {
         width: auto;
-        flex-direction: column;
     }
 }
